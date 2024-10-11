@@ -1,0 +1,52 @@
+---
+interface Props {
+	title: string;
+	favicon: string;
+}
+
+const { title, favicon = "/favicon.svg" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href={favicon} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="bg-orange-400 h-20">
+			
+		</header>
+
+		<menu class="bg-red-600 flex">
+			<li>
+				<a class=" block px-2 hover:bg-white/25" href="/">Inicio</a>
+			</li>
+
+			<li>
+				<a class=" block px-2 hover:bg-white/25" href="/quienes-somos">Quienes somos</a>
+			</li>
+
+			<li>
+				<a class=" block px-2 hover:bg-white/25" href="/organigrama">Organigrama</a>
+			</li>
+
+			<li>
+				<a class=" block px-2 hover:bg-white/25" href="/noticias">Noticias</a>
+			</li>
+
+			<li>
+				<a class=" block px-2 hover:bg-white/25" href="/contacto">Contactos</a>
+			</li>
+
+
+
+		</menu>
+
+		<slot />
+	</body>
+</html>
