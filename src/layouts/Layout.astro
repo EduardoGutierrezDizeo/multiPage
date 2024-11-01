@@ -49,4 +49,14 @@ const { title, favicon = "/favicon.svg" } = Astro.props;
 
 		<slot />
 	</body>
+
+	<style is:global>
+		@font-face {
+  			font-family: 'Myfont';
+ 			src: url('/fonts/RubikWetPaint-Regular.ttf');
+  			font-weight: normal;
+  			font-style: normal;
+  			font-display: swap;
+		}
+	</style>
 </html>
